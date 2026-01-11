@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FunSchool</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #e9ffe9;
+      text-align: center;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 30px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      margin: 10px;
+      font-size: 16px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #43a047;
+    }
+
+    .box {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 10px;
+      display: none;
+    }
+
+    .question {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 30px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 FunSchool</h1>
+  <p>Learning for Life</p>
+  <p><strong>Created by Haron</strong></p>
+</header>
+
+<div class="container">
+  <h2>Subjects</h2>
+
+  <button class="btn" onclick="showSubject('math')">➕ Maths</button>
+  <button class="btn" onclick="showSubject('english')">📖 English</button>
+  <button class="btn" onclick="showSubject('science')">🔬 Science</button>
+
+  <div id="math" class="box">
+    <h3>Maths Questions</h3>
+    <div class="question">
+      <strong>Q:</strong> What is 30 + 40?<br>
+      <em>Hint:</em> Add 3 + 4, then add a zero.
+    </div>
+    <div class="question">
+      <strong>Q:</strong> What is 6 × 7?<br>
+      <em>Hint:</em> 6 × 5 = 30, add two more 6s.
+    </div>
+  </div>
+
+  <div id="english" class="box">
+    <h3>English Questions</h3>
+    <div class="question">
+      <strong>Q:</strong> What is a noun?<br>
+      <em>Hint:</em> Name of a person, place, or thing.
+    </div>
+    <div class="question">
+      <strong>Q:</strong> What is a verb?<br>
+      <em>Hint:</em> It shows an action.
+    </div>
+  </div>
+
+  <div id="science" class="box">
+    <h3>Science Questions</h3>
+    <div class="question">
+      <strong>Q:</strong> What is gravity?<br>
+      <em>Hint:</em> It pulls things toward Earth.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  FunSchool © 2026
+</footer>
+
+<script>
+  function showSubject(subjectId) {
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => box.style.display = 'none');
+
+    document.getElementById(subjectId).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
